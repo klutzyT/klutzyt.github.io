@@ -1,61 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Advocacy Page</title>
-  <!-- Import Ubuntu font from Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud Storage: Pros & Cons</title>
   <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+    * {
       margin: 0;
-      font-family: 'Ubuntu', Arial, sans-serif;
-      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 2rem 1rem;
       text-align: center;
-      color: #2d3142;
     }
-    .image-placeholder {
-      width: 320px;
-      height: 200px;
-      background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
-      margin: 24px 0;
+    section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #4a90e2;
+      margin-bottom: 1rem;
+    }
+    .pros-cons {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      flex: 1 1 45%;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #222;
       color: #fff;
-      font-size: 1.3em;
-      border: 3px solid #7f53ac;
-      border-radius: 18px;
-      box-shadow: 0 4px 22px rgba(68,68,68,0.15);
-      letter-spacing: 1px;
-    }
-    h1 {
-      margin-top: 0;
-      font-size: 2.7em;
-      font-weight: 700;
-      color: #7f53ac;
-      text-shadow: 1px 1px 8px #fff6;
-    }
-    p {
-      font-size: 1.3em;
-      color: #635dff;
-      background: #fff6;
-      padding: 8px 20px;
-      border-radius: 7px;
-      display: inline-block;
-      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>Why Cloud Storage is Bad</h1>
-  <div class="Google.png">
-  </div>
-  <p>page 2</p>
-  <div class="Google.png">
-  </div>
+  <header>
+    <h1>Understanding Cloud Storage</h1>
+    <p>Your data, anytime, anywhere</p>
+  </header>
+
+  <section>
+    <h2>What is Cloud Storage?</h2>
+    <p>Cloud storage is a method of saving digital data to an off-site system maintained by a third party. Rather than storing information on your computer's hard drive or local server, you send it to a remote database via the internet.</p>
+  </section>
+
+  <section>
+    <h2>Why It's Good</h2>
+    <div class="pros-cons">
+      <div class="card">
+        <h3>Accessibility</h3>
+        <p>Access your files from any device with internet access — phone, tablet, or computer.</p>
+      </div>
+      <div class="card">
+        <h3>Backup & Recovery</h3>
+        <p>Automatic backups reduce the risk of losing important files due to hardware failures.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why It's Bad</h2>
+    <div class="pros-cons">
+      <div class="card">
+        <h3>Security Risks</h3>
+        <p>Storing sensitive data online makes it a target for hackers and data breaches.</p>
+      </div>
+      <div class="card">
+        <h3>Dependence on Internet</h3>
+        <p>If you don't have internet access, you may not be able to access your files.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Cloud Info Co. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Just a basic example interaction
+    document.querySelector('header').addEventListener('click', () => {
+      alert('Welcome to Cloud Storage 101!');
+    });
+  </script>
 </body>
 </html>
