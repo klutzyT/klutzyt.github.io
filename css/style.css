@@ -1,77 +1,35 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f4f9;
-  color: #333;
-  line-height: 1.6;
-  animation: fadeInBody 1s ease-in;
-}
-
-@keyframes fadeInBody {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-header {
-  background-color: #4a90e2;
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-  animation: slideDown 0.8s ease-out;
-}
-
-@keyframes slideDown {
-  from { transform: translateY(-50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-section {
-  padding: 2rem 1rem;
-  max-width: 900px;
-  margin: auto;
-}
-
-h2 {
-  color: #4a90e2;
-  margin-bottom: 1rem;
-  animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.pros-cons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
+/* ...existing code... */
 
 .card {
-  background: white;
-  border-radius: 12px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
   padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(67, 206, 162, 0.10);
   flex: 1 1 45%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s cubic-bezier(.77,0,.18,1), box-shadow 0.3s cubic-bezier(.77,0,.18,1), background 0.3s;
   animation: fadeInUp 1s ease forwards;
+  border: 2px solid;
+  border-image: linear-gradient(135deg, #43cea2 0%, #185a9d 100%) 1;
+  backdrop-filter: blur(4px);
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-14px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(67, 206, 162, 0.18);
+  background: rgba(255,255,255,1);
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #222;
-  color: #fff;
-  animation: fadeInBody 1.5s ease-in;
+/* Pop-out image animation */
+.pop-img {
+  opacity: 0;
+  transform: scale(0.8) translateY(40px);
+  transition: opacity 0.7s cubic-bezier(.77,0,.18,1), transform 0.7s cubic-bezier(.77,0,.18,1);
+  will-change: opacity, transform;
 }
+
+.pop-img.pop {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* ...existing code for .pros-cons, footer, etc... */
